@@ -50,7 +50,7 @@ Development files (Headers etc.) for %{name}.
 %package -n fido2-tools
 
 Summary:        FIDO2 tools
-Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       %{libname} = %{EVRD}
 
 %description -n fido2-tools
 FIDO2 command line tools to access and configure a FIDO2 compliant
