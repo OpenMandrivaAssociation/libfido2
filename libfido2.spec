@@ -32,7 +32,7 @@ between a client (browser) or a platform (operating system) with an external
 authentication device (for example the Yubico Security Key).
 
 %package -n %{libname}
-Summary:	%{description}
+Summary:	FIDO2 protocol support library
 Group:		System/Libraries
 
 %description -n %{libname}
