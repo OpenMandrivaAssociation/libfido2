@@ -1,12 +1,13 @@
 %define major 1
 %define libname %mklibname fido2
 %define devname %mklibname fido2 -d
+%global optflags %{optflags} -std=c11
 
 Summary:		FIDO2 library
 Name:		libfido2
-Version:		1.16.0
-Release:		2
-License:		BSD-2-Clause-Patent
+Version:		1.17.0
+Release:		1
+License:		BSD-2-Clause
 Group:	Security
 Url:		https://github.com/Yubico/%{name}
 Source0:	https://developers.yubico.com/%{name}/Releases/%{name}-%{version}.tar.gz
@@ -41,8 +42,6 @@ Group:		System/Libraries
 This is an open source library to support the FIDO2 protocol.
 
 %files -n %{libname}
-%doc NEWS README.adoc
-%license LICENSE
 %{_libdir}/%{name}.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -80,6 +79,8 @@ FIDO2 command line tools to access and configure a FIDO2 compliant
 authentication device.
 
 %files -n fido2-tools
+%doc NEWS README.adoc
+%license LICENSE
 %{_bindir}/fido2-assert
 %{_bindir}/fido2-cred
 %{_bindir}/fido2-token
