@@ -1,0 +1,13 @@
+diff a/CMakeLists.txt b/CMakeLists.txt
+
+--- a/CMakeLists.txt	2026-04-15 03:02:42.000000000 -0400
++++ b/CMakeLists.txt	2026-05-07 07:31:23.436697774 -0400
+@@ -87,7 +87,7 @@
+ 	elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
+ 		set(FIDO_CFLAGS "${FIDO_CFLAGS} -D_NETBSD_SOURCE")
+ 	endif()
+-	set(FIDO_CFLAGS "${FIDO_CFLAGS} -std=c99")
++	set(FIDO_CFLAGS "${FIDO_CFLAGS} -std=c11")
+ 	set(CMAKE_C_FLAGS "${FIDO_CFLAGS} ${CMAKE_C_FLAGS}")
+ endif()
+ 
