@@ -1,6 +1,7 @@
 %define major 1
 %define libname %mklibname fido2
 %define devname %mklibname fido2 -d
+%global optflags %{optflags} -std=c11
 
 Summary:		FIDO2 library
 Name:		libfido2
@@ -10,7 +11,6 @@ License:		BSD-2-Clause
 Group:	Security
 Url:		https://github.com/Yubico/%{name}
 Source0:	https://developers.yubico.com/%{name}/Releases/%{name}-%{version}.tar.gz
-Patch:	libfido2-use-std-c11.patch
 
 BuildSystem:	cmake
 
